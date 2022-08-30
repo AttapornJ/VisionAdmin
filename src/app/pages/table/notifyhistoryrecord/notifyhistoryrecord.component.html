@@ -1,0 +1,63 @@
+<h1>
+    แจ้งลงทะเบียนประวัติวัว / ควาย
+</h1>
+<nz-card style="width:100%;" nz-col class="gutter-row" [nzSpan]="24">
+    <nz-input-group [nzSuffix]="suffixIconSearch" nz-col [nzSpan]="12" class=" gutter-row search-id">
+        <input type="text" nz-input placeholder="ID ผู้ใช้" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+        <span nz-icon nzType="search"></span>
+    </ng-template>
+    <nz-input-group [nzSuffix]="suffixIconSearch" nz-col [nzSpan]="12" class=" gutter-row search-date">
+        <input type="date" nz-input placeholder="Date" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+        <span nz-icon nzType="calendar"></span>
+    </ng-template>
+    <br><br>
+    <nz-input-group [nzSuffix]="suffixIconSearch" nz-col [nzSpan]="12" class=" gutter-row search-animal">
+        <input type="text" nz-input placeholder="เลขบัตรประชาชน" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+        <span nz-icon nzType="search"></span>
+    </ng-template>
+    <nz-input-group [nzSuffix]="suffixIconSearch" nz-col [nzSpan]="12" class=" gutter-row search-eartag">
+        <input type="text" nz-input placeholder="ID เลขหู" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+        <span nz-icon nzType="search"></span>
+    </ng-template>
+</nz-card>
+<br>
+<nz-card style="width:100%;" nz-col class="gutter-row" [nzSpan]="32">
+
+    <nz-table style="width:100%;" #fixedTable [nzData]="data" [nzScroll]="{ x: '1150px', y: '240px' }" nz-col class="gutter-row" [nzSpan]="24">
+        <thead>
+            <tr>
+                <th nzWidth="30%">No.</th>
+                <th nzWidth="30%">ID Register</th>
+                <th nzWidth="30%">ชื่อ</th>
+                <th nzWidth="30%">สกุล</th>
+                <th nzWidth="30%">วันที่แจ้งลงทะเบียน</th>
+                <th nzWidth="30%">ตรวจสอบข้อมูล</th>
+                <th nzWidth="30%">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of fixedTable.data">
+                <td nzWidth="30%"> {{ data.No }}</td>
+                <td nzWidth="30%"> {{ data.ID_Register }}</td>
+                <td nzWidth="30%"> {{ data.FirstName }}</td>
+                <td nzWidth="30%"> {{ data.LastName }}</td>
+                <td nzWidth="30%"> {{ data.NotificationDate}}</td>
+                <td nzWidth="30%"><a>ตรวจสอบ</a>
+                </td>
+                <td nzWidth="30%">
+                    <label nz-checkbox [(ngModel)]="data.Actions"></label>
+                </td>
+            </tr>
+        </tbody>
+
+    </nz-table>
+    <button nz-button nzType="primary">Confirm</button>
+</nz-card>
