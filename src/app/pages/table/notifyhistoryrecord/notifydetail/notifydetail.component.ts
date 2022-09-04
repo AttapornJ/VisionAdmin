@@ -10,6 +10,7 @@ export class NotifydetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  
   }
 
 }

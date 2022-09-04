@@ -67,9 +67,10 @@ import { NzPipesModule } from 'ng-zorro-antd/pipes';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NzNoAnimationModule } from 'ng-zorro-antd/core/no-animation';
 
 export const ShareZorro:any =[
+    NzNoAnimationModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
