@@ -68,13 +68,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzNoAnimationModule } from 'ng-zorro-antd/core/no-animation';
+import { NzGraphModule } from 'ng-zorro-antd/graph';
 
-export const ShareZorro:any =[
+export const ShareZorro: any = [
+    NzGraphModule,
     NzNoAnimationModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-   
+
     NzLayoutModule,
     NzMenuModule,
     NzInputModule,
