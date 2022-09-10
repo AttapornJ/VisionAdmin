@@ -1,165 +1,175 @@
-<h2>ลงทะเบียนประวัติวัว</h2>
+<nz-layout>
+    <h2>ลงทะเบียนประวัติวัว</h2>
 
-<nz-card style="width:100%;" nz-col class="gutter-row" [nzSpan]="34" nzTitle="รายละเอียดผู้ถือกรรมสิทธิ " [nzExtra]="edit">
-    <form nz-form>
-        <nz-form-item>
-            <nz-form-label [nzSpan]="3" nzFor="FirstName">ชื่อ</nz-form-label>
-            <nz-form-control [nzSpan]="6">
-                <input nz-input name="FirstName" type="text" id="FirstName">
-            </nz-form-control>
-            <nz-form-label [nzSpan]="3" nzFor="LastName">สกุล</nz-form-label>
-            <nz-form-control [nzSpan]="6">
-                <input nz-input name="LastName" type="text" id="LastName">
-            </nz-form-control>
-        </nz-form-item>
+    <nz-card style="width:100%;" nz-col class="gutter-row" [nzSpan]="34" nzTitle="รายละเอียดผู้ถือกรรมสิทธิ " [nzExtra]="edit">
+        <form nz-form>
+            <nz-form-item>
+                <nz-form-label [nzSpan]="3" nzFor="FirstName">ชื่อ</nz-form-label>
+                <nz-form-control [nzSpan]="6">
+                    <input nz-input name="FirstName" type="text" id="FirstName">
+                </nz-form-control>
+                <nz-form-label [nzSpan]="3" nzFor="LastName">สกุล</nz-form-label>
+                <nz-form-control [nzSpan]="6">
+                    <input nz-input name="LastName" type="text" id="LastName">
+                </nz-form-control>
+            </nz-form-item>
 
-        <nz-form-item>
-            <nz-form-label [nzSpan]="3" nzFor="Province">จังหวัด</nz-form-label>
-            <nz-form-control [nzSpan]="6">
-                <input nz-input name="Province" type="text" id="Province">
-            </nz-form-control>
-            <nz-form-label [nzSpan]="3" nzFor="PhonNumber">เบอร์มือถือ</nz-form-label>
-            <nz-form-control [nzSpan]="6">
-                <input nz-input name="PhonNumber" type="text" id="PhonNumber">
-            </nz-form-control>
-        </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSpan]="3" nzFor="Province">จังหวัด</nz-form-label>
+                <nz-form-control [nzSpan]="6">
+                    <input nz-input name="Province" type="text" id="Province">
+                </nz-form-control>
+                <nz-form-label [nzSpan]="3" nzFor="PhonNumber">เบอร์มือถือ</nz-form-label>
+                <nz-form-control [nzSpan]="6">
+                    <input nz-input name="PhonNumber" type="text" id="PhonNumber">
+                </nz-form-control>
+            </nz-form-item>
 
-        <nz-form-item>
-            <nz-form-label [nzSpan]="3" nzFor="IDCardNumber">เลขที่บัตรประชาชน</nz-form-label>
-            <nz-form-control [nzSpan]="6">
-                <input nz-input name="IDCardNumber" type="text" id="IDCardNumber">
-            </nz-form-control>
-            <nz-form-label [nzSpan]="3" nzFor="RecommendedCode">รหัสผู้แนะนำ</nz-form-label>
-            <nz-form-control [nzSpan]="6">
-                <input nz-input name="RecommendedCode" type="text" id="RecommendedCode">
-            </nz-form-control>
-        </nz-form-item>
-    </form>
+            <nz-form-item>
+                <nz-form-label [nzSpan]="3" nzFor="IDCardNumber">เลขที่บัตรประชาชน</nz-form-label>
+                <nz-form-control [nzSpan]="6">
+                    <input nz-input name="IDCardNumber" type="text" id="IDCardNumber">
+                </nz-form-control>
+                <nz-form-label [nzSpan]="3" nzFor="RecommendedCode">รหัสผู้แนะนำ</nz-form-label>
+                <nz-form-control [nzSpan]="6">
+                    <input nz-input name="RecommendedCode" type="text" id="RecommendedCode">
+                </nz-form-control>
+            </nz-form-item>
+        </form>
 
-    <ng-template #edit>
-        <a>แก้ไข</a>
-    </ng-template>
-</nz-card>
-<br>
-<nz-card style="width:100%;" nz-col class="gutter-row" [nzSpan]="34" nzTitle="รายละเอียดพื้นฐาน และ รูปลักษณ์ " [nzExtra]="edit">
-    <nz-form-item>
-        <nz-form-label [nzSpan]="2" nzFor="type">สายพันธ์วัว</nz-form-label>
-        <nz-form-control [nzSpan]="2">
-            <nz-select id="type" formControlName="type">
-                <nz-option nzValue="Indu-Brasil" nzLabel="อินดูบราซิล "></nz-option>
-                <nz-option nzValue="American-Brahman" nzLabel="อเมริกันบราห์มัน"></nz-option>
-                <nz-option nzValue="Chalola" nzLabel="ชาโลเล่"></nz-option>
-                <nz-option nzValue="Wagyu" nzLabel="วากิว"></nz-option>
-                <nz-option nzValue="buffalo" nzLabel="ควาย"></nz-option>
-            </nz-select>
-        </nz-form-control>
-
-        <nz-form-label [nzSpan]="2" nzFor="gender">เพศ</nz-form-label>
-        <nz-form-control [nzSpan]="2">
-            <nz-select id="gender" formControlName="gender">
-                <nz-option nzValue="male" nzLabel="ผู้"></nz-option>
-                <nz-option nzValue="female" nzLabel="เมีย "></nz-option>
-            </nz-select>
-        </nz-form-control>
-
-        <nz-form-label [nzSpan]="2" nzFor="color">สี</nz-form-label>
-        <nz-form-control [nzSpan]="2">
-            <nz-select id="color" formControlName="color" nzPlaceHolder="">
-                <nz-option nzValue="Red" nzLabel="แดง"></nz-option>
-                <nz-option nzValue="Red-Bo" nzLabel="แดงโบ"></nz-option>
-                <nz-option nzValue="white" nzLabel="ขาวโบท"></nz-option>
-                <nz-option nzValue="White-Boat" nzLabel="ขาวโบท"></nz-option>
-                <nz-option nzValue="Yellow" nzLabel="เหลือง"></nz-option>
-                <nz-option nzValue="Yellow-Boat" nzLabel=" เหลืองโบท"></nz-option>
-                <nz-option nzValue="Black" nzLabel="ดำ"></nz-option>
-                <nz-option nzValue="Fancy" nzLabel="แฟนซี"></nz-option>
-            </nz-select>
-        </nz-form-control>
-        <nz-form-label [nzSpan]="2" nzFor="BirthDay">วันเกิด</nz-form-label>
-        <nz-form-control [nzSpan]="3">
-            <input type="Date" nz-input placeholder="BirthDay" />
-        </nz-form-control>
         <ng-template #edit>
             <a>แก้ไข</a>
         </ng-template>
-    </nz-form-item>
+    </nz-card>
     <br>
-    <nz-form-item>
+    <nz-card style="width:100%;" nz-col class="gutter-row" [nzSpan]="34" nzTitle="รายละเอียดพื้นฐาน และ รูปลักษณ์ " [nzExtra]="edit">
+        <nz-form-item>
+            <nz-form-label [nzSpan]="2" nzFor="type">สายพันธ์วัว</nz-form-label>
+            <nz-form-control [nzSpan]="2">
+                <nz-select id="type" formControlName="type">
+                    <nz-option nzValue="Indu-Brasil" nzLabel="อินดูบราซิล "></nz-option>
+                    <nz-option nzValue="American-Brahman" nzLabel="อเมริกันบราห์มัน"></nz-option>
+                    <nz-option nzValue="Chalola" nzLabel="ชาโลเล่"></nz-option>
+                    <nz-option nzValue="Wagyu" nzLabel="วากิว"></nz-option>
+                    <nz-option nzValue="buffalo" nzLabel="ควาย"></nz-option>
+                </nz-select>
+            </nz-form-control>
 
-        <nz-card nzHoverable style="height:270px; margin-left: 2%;" [nzCover]="StraightFace">
-            <nz-card-meta nzTitle="รูปหน้าตรง"></nz-card-meta>
-        </nz-card>
-        <ng-template #StraightFace>
-            <img alt="" style="width:270px" src="../../../../../assets/logo4.jpg" />
+            <nz-form-label [nzSpan]="2" nzFor="gender">เพศ</nz-form-label>
+            <nz-form-control [nzSpan]="2">
+                <nz-select id="gender" formControlName="gender">
+                    <nz-option nzValue="male" nzLabel="ผู้"></nz-option>
+                    <nz-option nzValue="female" nzLabel="เมีย "></nz-option>
+                </nz-select>
+            </nz-form-control>
+
+            <nz-form-label [nzSpan]="2" nzFor="color">สี</nz-form-label>
+            <nz-form-control [nzSpan]="2">
+                <nz-select id="color" formControlName="color" nzPlaceHolder="">
+                    <nz-option nzValue="Red" nzLabel="แดง"></nz-option>
+                    <nz-option nzValue="Red-Bo" nzLabel="แดงโบ"></nz-option>
+                    <nz-option nzValue="white" nzLabel="ขาวโบท"></nz-option>
+                    <nz-option nzValue="White-Boat" nzLabel="ขาวโบท"></nz-option>
+                    <nz-option nzValue="Yellow" nzLabel="เหลือง"></nz-option>
+                    <nz-option nzValue="Yellow-Boat" nzLabel=" เหลืองโบท"></nz-option>
+                    <nz-option nzValue="Black" nzLabel="ดำ"></nz-option>
+                    <nz-option nzValue="Fancy" nzLabel="แฟนซี"></nz-option>
+                </nz-select>
+            </nz-form-control>
+            <nz-form-label [nzSpan]="2" nzFor="BirthDay">วันเกิด</nz-form-label>
+            <nz-form-control [nzSpan]="3">
+                <input type="Date" nz-input placeholder="BirthDay" />
+            </nz-form-control>
+            <ng-template #edit>
+                <a>แก้ไข</a>
+            </ng-template>
+        </nz-form-item>
+        <br>
+        <nz-form-item>
+
+            <nz-card nzHoverable style="height:270px; margin-left: 2%;" [nzCover]="StraightFace">
+                <nz-card-meta nzTitle="รูปหน้าตรง"></nz-card-meta>
+            </nz-card>
+            <ng-template #StraightFace>
+                <img alt="" style="width:270px" src="../../../../../assets/logo4.jpg" />
+            </ng-template>
+
+            <nz-card nzHoverable style="height:270px; margin-left: 2%;" [nzCover]="LeftFace">
+                <nz-card-meta nzTitle="รูปหน้า-ซ้าย"></nz-card-meta>
+            </nz-card>
+            <ng-template #LeftFace>
+                <img alt="" style="width:270px" src="../../../../../assets/logo4.jpg" />
+            </ng-template>
+
+            <nz-card nzHoverable style="height:270px; margin-left: 2%;" [nzCover]="RightFace">
+                <nz-card-meta nzTitle="รูปหน้า-ขวา"></nz-card-meta>
+            </nz-card>
+            <ng-template #RightFace>
+                <img alt="" style="width:270px" src="../../../../../assets/logo4.jpg" />
+            </ng-template>
+
+            <nz-card nzHoverable style="height:270px; margin-left: 2%;" [nzCover]="FullBodyLeft">
+                <nz-card-meta nzTitle="รูปเต็มลำตัว-ซ้าย"></nz-card-meta>
+            </nz-card>
+            <ng-template #FullBodyLeft>
+                <img alt="" style="width:270px" src="../../../../../assets/logo4.jpg" />
+            </ng-template>
+
+            <nz-card nzHoverable style="height:270px; margin-left: 2%;" [nzCover]="FullBodyRight">
+                <nz-card-meta nzTitle="รูปเต็มลำตัว-ขวา"></nz-card-meta>
+            </nz-card>
+            <ng-template #FullBodyRight>
+                <img alt="" style="width:270px" src="../../../../../assets/logo4.jpg" />
+            </ng-template>
+
+        </nz-form-item>
+    </nz-card>
+    <br>
+    <nz-card style="width:100%;" nz-col class="gutter-row" [nzSpan]="34" nzTitle="รายละเอียดทางพันธุกรรม" [nzExtra]="edit">
+
+        <button nz-button nzType="default" (click)="expandAll()">ExpandAll</button>
+        <button nz-button nzType="default" (click)="collapseAll()">CollapseAll</button>
+        <button nz-button nzType="primary" (click)="fit()">Fit</button>
+        <nz-radio-group [(ngModel)]="rankDirection">
+            <label nz-radio-button nzValue="LR">LR</label>
+            <label nz-radio-button nzValue="RL">RL</label>
+            <label nz-radio-button nzValue="TB">TB</label>
+            <label nz-radio-button nzValue="BT">BT</label>
+        </nz-radio-group>
+        <nz-graph nz-graph-zoom [nzGraphData]="graphData" [nzAutoSize]="true" [nzRankDirection]="rankDirection" (nzGraphInitialized)="graphInitialized($event)">
+            <ng-container *nzGraphNode="let node">
+                <foreignObject x="0" y="0" [attr.width]="node.width" [attr.height]="node.height">
+                    <xhtml:div class="graph-node leaf-node" (click)="focusNode(node.id || node.name)">
+                        <div class="title">
+                            {{ node.name }}
+                        </div>
+                    </xhtml:div>
+                </foreignObject>
+            </ng-container>
+
+            <ng-container *nzGraphGroupNode="let node">
+                <foreignObject x="0" y="0" [attr.width]="node.width" [attr.height]="node.height">
+                    <xhtml:div class="graph-node group-node" (click)="focusNode(node.id || node.name)">
+                        <div class="title">
+                            {{ node.name }}
+                        </div>
+                    </xhtml:div>
+                </foreignObject>
+            </ng-container>
+        </nz-graph>
+
+
+
+        <ng-template #edit>
+            <a>แก้ไข</a>
         </ng-template>
+    </nz-card>
+    <nz-footer>
 
-        <nz-card nzHoverable style="height:270px; margin-left: 2%;" [nzCover]="LeftFace">
-            <nz-card-meta nzTitle="รูปหน้า-ซ้าย"></nz-card-meta>
-        </nz-card>
-        <ng-template #LeftFace>
-            <img alt="" style="width:270px" src="../../../../../assets/logo4.jpg" />
-        </ng-template>
+        <div nz-row>
+            <div nz-col nzSpan="12"><button nz-button [nzSize]="'large'" nzType="primary" style="width:99%; margin-right: 1%;">Back</button></div>
+            <div nz-col nzSpan="12"> <button nz-button [nzSize]="'large'" nzType="primary" style="width:99%;margin-left: 1%;">Approve</button> </div>
+        </div>
 
-        <nz-card nzHoverable style="height:270px; margin-left: 2%;" [nzCover]="RightFace">
-            <nz-card-meta nzTitle="รูปหน้า-ขวา"></nz-card-meta>
-        </nz-card>
-        <ng-template #RightFace>
-            <img alt="" style="width:270px" src="../../../../../assets/logo4.jpg" />
-        </ng-template>
-
-        <nz-card nzHoverable style="height:270px; margin-left: 2%;" [nzCover]="FullBodyLeft">
-            <nz-card-meta nzTitle="รูปเต็มลำตัว-ซ้าย"></nz-card-meta>
-        </nz-card>
-        <ng-template #FullBodyLeft>
-            <img alt="" style="width:270px" src="../../../../../assets/logo4.jpg" />
-        </ng-template>
-
-        <nz-card nzHoverable style="height:270px; margin-left: 2%;" [nzCover]="FullBodyRight">
-            <nz-card-meta nzTitle="รูปเต็มลำตัว-ขวา"></nz-card-meta>
-        </nz-card>
-        <ng-template #FullBodyRight>
-            <img alt="" style="width:270px" src="../../../../../assets/logo4.jpg" />
-        </ng-template>
-
-    </nz-form-item>
-</nz-card>
-<br>
-<nz-card style="width:100%;" nz-col class="gutter-row" [nzSpan]="34" nzTitle="รายละเอียดทางพันธุกรรม" [nzExtra]="edit">
-
-    <button nz-button nzType="default" (click)="expandAll()">ExpandAll</button>
-    <button nz-button nzType="default" (click)="collapseAll()">CollapseAll</button>
-    <button nz-button nzType="primary" (click)="fit()">Fit</button>
-    <nz-radio-group [(ngModel)]="rankDirection">
-        <label nz-radio-button nzValue="LR">LR</label>
-        <label nz-radio-button nzValue="RL">RL</label>
-        <label nz-radio-button nzValue="TB">TB</label>
-        <label nz-radio-button nzValue="BT">BT</label>
-    </nz-radio-group>
-    <nz-graph nz-graph-zoom [nzGraphData]="graphData" [nzAutoSize]="true" [nzRankDirection]="rankDirection" (nzGraphInitialized)="graphInitialized($event)">
-        <ng-container *nzGraphNode="let node">
-            <foreignObject x="0" y="0" [attr.width]="node.width" [attr.height]="node.height">
-                <xhtml:div class="graph-node leaf-node" (click)="focusNode(node.id || node.name)">
-                    <div class="title">
-                        {{ node.name }}
-                    </div>
-                </xhtml:div>
-            </foreignObject>
-        </ng-container>
-
-        <ng-container *nzGraphGroupNode="let node">
-            <foreignObject x="0" y="0" [attr.width]="node.width" [attr.height]="node.height">
-                <xhtml:div class="graph-node group-node" (click)="focusNode(node.id || node.name)">
-                    <div class="title">
-                        {{ node.name }}
-                    </div>
-                </xhtml:div>
-            </foreignObject>
-        </ng-container>
-    </nz-graph>
-
-
-
-    <ng-template #edit>
-        <a>แก้ไข</a>
-    </ng-template>
-</nz-card>
+    </nz-footer>
+</nz-layout>
