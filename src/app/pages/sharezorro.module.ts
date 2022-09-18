@@ -69,8 +69,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzNoAnimationModule } from 'ng-zorro-antd/core/no-animation';
 import { NzGraphModule } from 'ng-zorro-antd/graph';
+import { NgChartsModule } from 'ng2-charts';
 
 export const ShareZorro: any = [
+    NgChartsModule,
     NzGraphModule,
     NzNoAnimationModule,
     BrowserAnimationsModule,
